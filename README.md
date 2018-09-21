@@ -1,2 +1,5 @@
 # lab-keys
-Identify if anyone is in the lab
+
+Checking if keys were already taken by fellow labmate in the journal is not the programmer way of doing stuff.  
+This process is now automated!  
+[DEMO](http://lab-keys.surge.sh)  
