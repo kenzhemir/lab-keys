@@ -25,7 +25,10 @@ class ListItemController {
         const statusElem = document.createElement("div");
         statusElem.classList.add("person__status");
         statusElem.classList.toggle("active", user.active);
-        const nameElem = document.createTextNode(`${user.name} ${user.surname}`);
+        const nameElem = document.createElement("span");
+        nameElem.dataset.name = user.name;
+        nameElem.innerText = `${user.name} ${user.surname}`;
+        nameElem.addEventListener("click", handleNameClick);
         element.appendChild(statusElem);
         element.appendChild(nameElem);
         return {
@@ -92,6 +95,10 @@ function restoreLocalUser() {
         document.getElementById("overlay").classList.add("hidden");
         return false;
     }
+}
+
+function handleNameClick(event) {
+    document.getElementById("inputName").value = event.currentTarget.dataset.name;
 }
 
 window.onload = () => {

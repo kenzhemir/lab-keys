@@ -100,6 +100,11 @@ h1 {
   align-items: center;
   list-style-type: none;
   width: 100%;
+  cursor: default;
+}
+
+.list>li:hover {
+  color: rgba(31, 133, 10, 0.8);
 }
 
 .person__status {
