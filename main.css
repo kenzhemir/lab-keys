@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  width: 80%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.error-msg {
+  display: none;
+  color: red;
+  font-size: 10px;
+}
+
+.error-msg.show {
+  display: block;
+}
+
+.mystatus {
+  margin-bottom: 20px;
+}
+
+.mystatus>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: #e56262;
+  opacity: 0.85;
+  border-radius: 75px;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  opacity: 1;
+}
+
+.toggle.active {
+  background-color: #3FAF82;
+  opacity: 0.85;
+}
+
+.toggle.active:hover {
+  opacity: 1;
+}
+
+.list>li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+}
+
+.person__status {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #E56262DD;
+  margin: 5px 10px;
+}
+
+.person__status.active {
+  background-color: #3FAF82DD;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form>div {
+  width: 100%;
+}
+
+.form button {
+  border: none;
+  width: 30%;
+  height: 35px;
+  cursor: pointer;
+}
+
+/*   background-color: #E56262DD; */
+/*   background-color: #E56262; */
+/*   background-color: #3FAF82DD; */
+/*   background-color: #3FAF82; */
+
+:focus {
+  outline: none;
+}
+
+.form input {
+  display: inline-block;
+  width: 65%;
+  height: 35px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  border: 1px solid #ccc;
+}

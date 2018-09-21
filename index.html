@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>In da lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-functions.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyApZDkayEfX0TWfckvCIhAe7XVhmAidnuM",
+            authDomain: "lapkis-c3fac.firebaseapp.com",
+            databaseURL: "https://lapkis-c3fac.firebaseio.com",
+            projectId: "lapkis-c3fac",
+            storageBucket: "lapkis-c3fac.appspot.com",
+            messagingSenderId: "698900785287"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <div id="overlay" class="overlay">Loading...</div>
+    <div id="container" class="container">
+        <div class="mystatus">
+            <div id="unsigned">
+                <div class="form">
+                    <h1>Please enter your name:</h1>
+                    <div>
+                        <input id="inputName" class="effect-16" type="text" placeholder="First Name" />
+                        <button id="enterButton" type="button">Enter</button>
+                    </div>
+                    <p id="errorMessage" class="error-msg">No user with such name!</p>
+                </div>
+            </div>
+            <div id="signed" class="hidden">
+                <h1>
+                    Hi, <span id="name"></span>!
+                    <br /> Are you in the lab?
+                </h1>
+                <div id="toggle" class="toggle active"></div>
+            </div>
+        </div>
+        <div id="listContainer">
+            Others:
+            <!-- <ul class="list">
+                <li>
+                    <div class="person__status active"></div>Miras Kenzhegaliyev
+                </li>
+                <li>
+                    <div class="person__status"></div>Gaukhar Dauzhan
+                </li>
+                <li>
+                    <div class="person__status active"></div>Aslan Assykhanov
+                </li>
+            </ul> -->
+        </div>
+
+    </div>
+</body>
+
+</html>
